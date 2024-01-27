@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "potioncore:item/raw_sapphire"
-    }
-}
