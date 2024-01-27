@@ -1,0 +1,19 @@
+{
+    "item.potioncore.sapphire": "Sapphire",
+    "item.potioncore.raw_sapphire": "Raw Sapphire",
+
+    "creativetab.potioncore": "Potion Core",
+
+    "effect.potioncore.freeze": "Freeze",
+    "effect.potioncore.cure": "Cure",
+
+    "item.minecraft.potion.effect.freeze_potion": "Potion of Freeze",
+    "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+    "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+    "item.minecraft.tipped_arrow.effect.freeze_potion": "Tipped Arrow of Freeze",
+
+    "item.minecraft.potion.effect.cure_potion": "Potion of Cure",
+    "item.minecraft.splash_potion.effect.cure_potion": "Splash Potion of Cure",
+    "item.minecraft.lingering_potion.effect.cure_potion": "Lingering Potion of Cure",
+    "item.minecraft.tipped_arrow.effect.cure_potion": "Tipped Arrow of Cure"
+}

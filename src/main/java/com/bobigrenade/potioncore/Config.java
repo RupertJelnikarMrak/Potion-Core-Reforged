@@ -1,4 +1,4 @@
-package net.bobigrenade.potioncore;
+package com.bobigrenade.potioncore;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
