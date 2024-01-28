@@ -4,8 +4,11 @@
 
     "creativetab.potioncore": "Potion Core",
 
+    "potioncore:projectile_damage": "Projectile damage",
+
     "effect.potioncore.freeze": "Freeze",
     "effect.potioncore.cure": "Cure",
+    "effect.potioncore.trueshot": "Trueshot",
 
     "item.minecraft.potion.effect.freeze_potion": "Potion of Freeze",
     "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
@@ -15,5 +18,10 @@
     "item.minecraft.potion.effect.cure_potion": "Potion of Cure",
     "item.minecraft.splash_potion.effect.cure_potion": "Splash Potion of Cure",
     "item.minecraft.lingering_potion.effect.cure_potion": "Lingering Potion of Cure",
-    "item.minecraft.tipped_arrow.effect.cure_potion": "Tipped Arrow of Cure"
+    "item.minecraft.tipped_arrow.effect.cure_potion": "Tipped Arrow of Cure",
+
+    "item.minecraft.potion.effect.trueshot_potion": "Potion of Trueshot",
+    "item.minecraft.splash_potion.effect.trueshot_potion": "Splash Potion of Trueshot",
+    "item.minecraft.lingering_potion.effect.trueshot_potion": "Lingering Potion of Trueshot",
+    "item.minecraft.tipped_arrow.effect.trueshot_potion": "Tipped Arrow of Trueshot"
 }

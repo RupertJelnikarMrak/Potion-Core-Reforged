@@ -3,6 +3,7 @@ package com.bobigrenade.potioncore.api;
 import com.bobigrenade.potioncore.PotionCore;
 import com.bobigrenade.potioncore.effect.CureEffect;
 import com.bobigrenade.potioncore.effect.FreezeEffect;
+import com.bobigrenade.potioncore.effect.TrueshotEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffect;
@@ -36,14 +37,14 @@ public class PotionCoreObjects {
         /*
          * Arrow Damage
          */
-        public static final RegistryObject<Attribute> ARROW_DAMAGE = ATTRIBUTES.register(
-            "arrow_damage",
+        public static final RegistryObject<Attribute> PROJECTILE_DAMAGE = ATTRIBUTES.register(
+            "projectile_damage",
             () ->
                 new RangedAttribute(
-                    "potioncore:arrow_damage",
+                    "potioncore:projectile_damage",
                     1.0D,
                     0.0D,
-                    10.0D
+                    100.0D
                 )
         );
 
@@ -75,6 +76,14 @@ public class PotionCoreObjects {
             () -> new CureEffect(MobEffectCategory.BENEFICIAL, 16777215)
         );
 
+        /*
+         * Trueshot
+         */
+        public static final RegistryObject<MobEffect> TRUESHOT = MOB_EFFECTS.register(
+            "trueshot",
+            () -> new TrueshotEffect(MobEffectCategory.BENEFICIAL, 8716500)
+        );
+
         public static void register(IEventBus eventBus) {
             MOB_EFFECTS.register(eventBus);
         }
@@ -90,21 +99,17 @@ public class PotionCoreObjects {
         /*
          * Freeze potion
          */
-        public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register(
-            "freeze_potion",
-            () ->
-                new Potion(
-                    new MobEffectInstance(MobEffects.FREEZE.get(), 200, 0)
-                )
-        );
+        public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion", () ->new Potion(new MobEffectInstance(MobEffects.FREEZE.get(), 200, 0)));
 
         /*
          * Cure potion
          */
-        public static final RegistryObject<Potion> CURE_POTION = POTIONS.register(
-            "cure_potion",
-            () -> new Potion(new MobEffectInstance(MobEffects.CURE.get(), 0, 0))
-        );
+        public static final RegistryObject<Potion> CURE_POTION = POTIONS.register("cure_potion", () -> new Potion(new MobEffectInstance(MobEffects.CURE.get(), 0, 0)));
+
+        /*
+         * Trueshot potion
+         */
+        public static final RegistryObject<Potion> TRUESHOT_POTION = POTIONS.register("trueshot_potion", () -> new Potion(new MobEffectInstance(MobEffects.TRUESHOT.get(), 1200, 0)));
 
         public static void register(IEventBus eventBus) {
             POTIONS.register(eventBus);
@@ -138,6 +143,12 @@ public class PotionCoreObjects {
                                 Potions.FREEZE_POTION.get()
                             )
                         );
+                        pOutput.accept(
+                            PotionUtils.setPotion(
+                                new ItemStack(Items.POTION),
+                                Potions.TRUESHOT_POTION.get()
+                            )
+                        );
                     })
                     .build()
         );
@@ -147,7 +158,10 @@ public class PotionCoreObjects {
         }
 
         private static ItemStack getPotionTabIcon() {
-            return PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.CURE_POTION.get());
+            return PotionUtils.setPotion(
+                new ItemStack(Items.POTION),
+                Potions.CURE_POTION.get()
+            );
         }
     }
 
