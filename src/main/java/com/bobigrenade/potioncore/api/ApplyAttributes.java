@@ -16,6 +16,7 @@ public class ApplyAttributes {
     {
         event.getTypes().forEach(type -> {
             event.add(type, PotionCoreObjects.Attributes.PROJECTILE_DAMAGE.get());
+            event.add(type, PotionCoreObjects.Attributes.PROJECTILE_SPEED.get());
         });
     }
 }

@@ -35,7 +35,7 @@ public class PotionCoreObjects {
         );
 
         /*
-         * Arrow Damage
+         * Projectile Damage
          */
         public static final RegistryObject<Attribute> PROJECTILE_DAMAGE = ATTRIBUTES.register(
             "projectile_damage",
@@ -45,6 +45,19 @@ public class PotionCoreObjects {
                     1.0D,
                     0.0D,
                     100.0D
+                )
+        );
+
+        /*
+         * Projectile Speed
+         */
+        public static final RegistryObject<Attribute> PROJECTILE_SPEED = ATTRIBUTES.register(
+            "projectile_speed", 
+            () -> new RangedAttribute(
+                    "potioncore:projectile_speed", 
+                    1.0D, 
+                    0.0D, 
+                    10.0D
                 )
         );
 

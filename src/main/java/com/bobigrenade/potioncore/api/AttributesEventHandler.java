@@ -23,6 +23,7 @@ public class AttributesEventHandler {
             if (level.isClientSide || projectile.getPersistentData().getBoolean("potioncore.projectile.done")) return;
             if (projectile.getOwner() instanceof LivingEntity livingEntity) {
                 projectile.setBaseDamage(projectile.getBaseDamage() * livingEntity.getAttributeValue(PotionCoreObjects.Attributes.PROJECTILE_DAMAGE.get()));
+                projectile.setDeltaMovement(projectile.getDeltaMovement().scale(livingEntity.getAttributeValue(PotionCoreObjects.Attributes.PROJECTILE_SPEED.get())));
             }
             projectile.getPersistentData().putBoolean("potioncore.projectile.done", true);
         }
