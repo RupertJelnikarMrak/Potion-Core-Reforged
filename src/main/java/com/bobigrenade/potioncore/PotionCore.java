@@ -1,5 +1,6 @@
 package com.bobigrenade.potioncore;
 
+import com.bobigrenade.potioncore.api.AttributesEventHandler;
 import com.bobigrenade.potioncore.api.PotionCoreObjects;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,6 +27,8 @@ public class PotionCore {
         PotionCoreObjects.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        MinecraftForge.EVENT_BUS.register(new AttributesEventHandler());
         
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

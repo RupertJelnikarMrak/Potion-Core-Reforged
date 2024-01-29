@@ -3,6 +3,7 @@ package com.bobigrenade.potioncore.api;
 import com.bobigrenade.potioncore.PotionCore;
 import com.bobigrenade.potioncore.effect.CureEffect;
 import com.bobigrenade.potioncore.effect.FreezeEffect;
+import com.bobigrenade.potioncore.effect.ReachEffect;
 import com.bobigrenade.potioncore.effect.TrueshotEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -97,6 +98,14 @@ public class PotionCoreObjects {
             () -> new TrueshotEffect(MobEffectCategory.BENEFICIAL, 8716500)
         );
 
+        /*
+         * Reach
+         */
+        public static final RegistryObject<MobEffect> REACH = MOB_EFFECTS.register(
+            "reach",
+            () -> new ReachEffect(MobEffectCategory.BENEFICIAL, 3002001)
+        );
+
         public static void register(IEventBus eventBus) {
             MOB_EFFECTS.register(eventBus);
         }
@@ -123,6 +132,11 @@ public class PotionCoreObjects {
          * Trueshot potion
          */
         public static final RegistryObject<Potion> TRUESHOT_POTION = POTIONS.register("trueshot_potion", () -> new Potion(new MobEffectInstance(MobEffects.TRUESHOT.get(), 1200, 0)));
+
+        /*
+         * Reach potion
+         */
+        public static final RegistryObject<Potion> REACH_POTION = POTIONS.register("reach_potion", () -> new Potion(new MobEffectInstance(MobEffects.REACH.get(), 1200, 0)));
 
         public static void register(IEventBus eventBus) {
             POTIONS.register(eventBus);
@@ -160,6 +174,12 @@ public class PotionCoreObjects {
                             PotionUtils.setPotion(
                                 new ItemStack(Items.POTION),
                                 Potions.TRUESHOT_POTION.get()
+                            )
+                        );
+                        pOutput.accept(
+                            PotionUtils.setPotion(
+                                new ItemStack(Items.POTION),
+                                Potions.REACH_POTION.get()
                             )
                         );
                     })

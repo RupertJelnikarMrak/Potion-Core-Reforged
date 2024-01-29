@@ -5,10 +5,13 @@
     "creativetab.potioncore": "Potion Core",
 
     "potioncore:projectile_damage": "Projectile damage",
+    "potioncore:projectile_speed": "Projectile speed",
+    "potioncore:reach": "Reach",
 
     "effect.potioncore.freeze": "Freeze",
     "effect.potioncore.cure": "Cure",
     "effect.potioncore.trueshot": "Trueshot",
+    "effect.potioncore.reach": "Reach",
 
     "item.minecraft.potion.effect.freeze_potion": "Potion of Freeze",
     "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
@@ -23,5 +26,10 @@
     "item.minecraft.potion.effect.trueshot_potion": "Potion of Trueshot",
     "item.minecraft.splash_potion.effect.trueshot_potion": "Splash Potion of Trueshot",
     "item.minecraft.lingering_potion.effect.trueshot_potion": "Lingering Potion of Trueshot",
-    "item.minecraft.tipped_arrow.effect.trueshot_potion": "Tipped Arrow of Trueshot"
+    "item.minecraft.tipped_arrow.effect.trueshot_potion": "Tipped Arrow of Trueshot",
+
+    "item.minecraft.potion.effect.reach_potion": "Potion of Reach",
+    "item.minecraft.splash_potion.effect.reach_potion": "Splash Potion of Reach",
+    "item.minecraft.lingering_potion.effect.reach_potion": "Lingering Potion of Reach",
+    "item.minecraft.tipped_arrow.effect.reach_potion": "Tipped Arrow of Reach"
 }
