@@ -95,7 +95,7 @@ public class PotionCoreObjects {
          */
         public static final RegistryObject<MobEffect> TRUESHOT = MOB_EFFECTS.register(
             "trueshot",
-            () -> new TrueshotEffect(MobEffectCategory.BENEFICIAL, 8716500)
+            () -> new TrueshotEffect(MobEffectCategory.BENEFICIAL, 16711680)
         );
 
         /*
@@ -103,7 +103,7 @@ public class PotionCoreObjects {
          */
         public static final RegistryObject<MobEffect> REACH = MOB_EFFECTS.register(
             "reach",
-            () -> new ReachEffect(MobEffectCategory.BENEFICIAL, 3002001)
+            () -> new ReachEffect(MobEffectCategory.BENEFICIAL, 15172835)
         );
 
         public static void register(IEventBus eventBus) {
